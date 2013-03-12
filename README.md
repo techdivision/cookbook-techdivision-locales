@@ -5,8 +5,9 @@ Debian machine.
 
 Requirements
 ------------
-The recipe of this cookbook has only been tested with Ubuntu and Debian and relies
-on the locale-gen command.
+The recipe of this cookbook has only been tested with Ubuntu. It relies on the
+locale-gen command and the fact that supported locales are listed in
+/var/lib/locales/supported.d/
 
 Attributes
 ----------
@@ -21,7 +22,7 @@ By setting attributes for your node you can define which locales should be gener
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['robertlemke-locales']['locales']</tt></td>
+    <td><tt>node['robertlemke-locales']['locales']</tt></td>
     <td>Array</td>
     <td>A list of locales</td>
     <td><tt>['en_US.UTF-8 UTF-8', 'de_DE.UTF-8 UTF-8']</tt></td>
@@ -44,8 +45,8 @@ Just define the attributes and then include `robertlemke-locales` in your node's
 }
 ```
 
-License and Authors
--------------------
+License and Author
+------------------
 Copyright (c) 2013 Robert Lemke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
