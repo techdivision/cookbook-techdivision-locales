@@ -15,18 +15,21 @@ By setting attributes for your node you can define which locales should be gener
 
 #### robertlemke-locales::default
 <table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>node['robertlemke-locales']['locales']</tt></td>
-    <td>Array</td>
-    <td>A list of locales</td>
-    <td><tt>['en_US.UTF-8 UTF-8', 'de_DE.UTF-8 UTF-8']</tt></td>
-  </tr>
+	<tr>
+		<th>Key</th>
+		<th>Type</th>
+		<th>Description</th>
+		<th>Default</th>
+	</tr>
+	<tr>
+		<td><tt>node['robertlemke-locales']['locales']</tt></td>
+		<td>Array</td>
+		<td>A list of locales</td>
+		<td><tt>default['robertlemke-locales']['locales'] = [
+		'en_US UTF-8', 'en_US.UTF-8 UTF-8', 'en_US ISO-8859-1',
+		'de_DE UTF-8', 'de_DE.UTF-8 UTF-8', 'de_DE ISO-8859-1'
+		]</tt></td>
+	</tr>
 </table>
 
 Usage
