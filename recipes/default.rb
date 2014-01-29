@@ -1,9 +1,9 @@
 #
-# Cookbook Name:: robertlemke-locales
+# Cookbook Name:: techdivision-locales
 # Recipe:: default
-# Author:: Robert Lemke <rl@robertlemke.com>
+# Author:: Robert Lemke <r.lemke@techdivision.com>
 #
-# Copyright (c) 2013-2014 Robert Lemke
+# Copyright (c) 2014 Robert Lemke, TechDivision GmbH
 #
 # Licensed under the MIT License (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ when "debian"
 		owner "root"
 		group "root"
 		mode "0644"
-		content node['robertlemke-locales']['locales'].join("\n") + "\n"
+		content node['techdivision-locales']['locales'].join("\n") + "\n"
 		notifies :run, "execute[locale-gen]", :immediate
 	end
 else
@@ -37,7 +37,7 @@ else
 		owner "root"
 		group "root"
 		mode "0644"
-		content node['robertlemke-locales']['locales'].join("\n") + "\n"
+		content node['techdivision-locales']['locales'].join("\n") + "\n"
 		notifies :run, "execute[locale-gen]", :immediate
 	end
 end
